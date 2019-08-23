@@ -14,6 +14,7 @@ use Symfony\Component\Translation\TranslatorInterface;
 
 class ColorPickerType extends AbstractType
 {
+    /** @var TranslatorInterface */
     private $translator;
 
     /**
@@ -36,6 +37,11 @@ class ColorPickerType extends AbstractType
         if (!empty($view->vars['value']) && 1 === preg_match("/^#([0-9a-fA-F]{8}|[0-9a-fA-F]{6}|[0-9a-fA-F]{4}|[0-9a-fA-F]{3})$/", $view->vars['value'])){
             $options['pickr_options']['default'] = $view->vars['value'];
         }
+        // if developer overrode class, append ours
+        if (!empty($view->vars['attr']['class'])){
+            $view->vars['attr']['class'] .= ' color-picker ' . $view->vars['id'];
+        }
+        $options['pickr_options']['el'] = '.' . $view->vars['id'];
         $view->vars['pickr_options'] = $options['pickr_options'];
     }
 
@@ -178,9 +184,9 @@ class ColorPickerType extends AbstractType
 
                 // Button strings, brings the possibility to use a language other than English.
                 'strings' => [
-                   'save' => $this->translator->trans('buttons.save', [], 'ColorPickerBundle'),  // Default for save button
-                   'clear' => $this->translator->trans('buttons.clear', [], 'ColorPickerBundle'), // Default for clear button
-                   'cancel' => $this->translator->trans('buttons.cancel', [], 'ColorPickerBundle'), // Default for cancel button
+                    'save' => $this->translator->trans('buttons.save', [], 'ColorPickerBundle'),  // Default for save button
+                    'clear' => $this->translator->trans('buttons.clear', [], 'ColorPickerBundle'), // Default for clear button
+                    'cancel' => $this->translator->trans('buttons.cancel', [], 'ColorPickerBundle'), // Default for cancel button
                 ],
             ],
         ]);
