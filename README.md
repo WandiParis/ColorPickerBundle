@@ -196,7 +196,7 @@ If you're using [EasyAdminPlusBundle](https://github.com/WandiParis/EasyAdminPlu
 ```
 
 <p align="center">
-    <img src="doc/easyadminplus-list.png" align="middle" alt="WandiColorPicker - List" />
+    <img src="doc/img/easyadminplus-list.png" align="middle" alt="WandiColorPicker - List" />
 </p>
 
 #### New/Edit
@@ -206,5 +206,5 @@ If you're using [EasyAdminPlusBundle](https://github.com/WandiParis/EasyAdminPlu
 ```
 
 <p align="center">
-    <img src="doc/easyadminplus-form.png" align="middle" alt="WandiColorPicker - Form" />
+    <img src="doc/img/easyadminplus-form.png" align="middle" alt="WandiColorPicker - Form" />
 </p>
