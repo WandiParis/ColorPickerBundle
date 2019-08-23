@@ -155,7 +155,7 @@ If you need to change the translations or add your own locale, simply override `
 If you want to convert your color, use one of the following `Twig filters`:
 
 ```twig
-<h2>With Alpha Channel</h2>
+<h2>Without Alpha Channel</h2>
 
 Test hex: {{ tag.color|wandi_color_picker_convert(constant("Wandi\\ColorPickerBundle\\Twig\\ExtensionColorExtension::COLOR_HEX")) }}
 > {# #FF851B #}
@@ -164,7 +164,7 @@ Test rgb: {{ tag.color|wandi_color_picker_convert(constant("Wandi\\ColorPickerBu
 Test hsl: {{ tag.color|wandi_color_picker_convert(constant("Wandi\\ColorPickerBundle\\Twig\\ExtensionColorExtension::COLOR_HSL")) }}
 > {# hsl(27.89474, 100%, 55.29412%) #}
 
-<h2>Without Alpha Channel</h2>
+<h2>With Alpha Channel</h2>
 
 Test hex: {{ tag.color|wandi_color_picker_convert(constant("Wandi\\ColorPickerBundle\\Twig\\ExtensionColorExtension::COLOR_HEX")) }}
 > {# #39855AC4 #}
