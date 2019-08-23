@@ -185,6 +185,26 @@ If you need to know the brightness of the color, you can also use the filter:
 
 If you apply a dynamic background-color to an HTML element, it can be usefull to also change the text color.
 
-### EasyAdminBundle
+### WandiEasyAdminPlusBundle
 
-WIP
+If you're using [EasyAdminPlusBundle](https://github.com/WandiParis/EasyAdminPlusBundle/tree/master), our wrapper of [EasyAdminBundle](https://github.com/EasyCorp/EasyAdminBundle/tree/master), you can easily use this bundle is the admin area.
+
+#### List/Show
+
+```yaml
+- { property: color, label: 'Color', type: 'Wandi\ColorPickerBundle\Form\Type\ColorPickerType' }
+```
+
+<p align="center">
+    <img src="doc/easyadminplus-list.png" align="middle" alt="WandiColorPicker - List" />
+</p>
+
+#### New/Edit
+
+```yaml
+- { property: color, label: 'Color', template: '@WandiEasyAdminPlus/templates/wandi_color_picker.html.twig' }
+```
+
+<p align="center">
+    <img src="doc/easyadminplus-form.png" align="middle" alt="WandiColorPicker - Form" />
+</p>
