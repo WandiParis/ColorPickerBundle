@@ -20,7 +20,7 @@ $ composer require wandi/color-picker-bundle
 
 ### Entity
 
-We recommand you to use an hexadecimal color code with alpha (`AARRGGBB hex`) because it's the shortest standard with a length of simply 9 chars.
+We recommand you to store the hexadecimal color code with alpha (`AARRGGBB hex`) because it's the shortest standard with a length of simply 9 chars.
 
 You'll be able later to convert to `HSL`, `HSLA`, `RGB` & `RGBA` if needed (see below).
 
@@ -62,7 +62,7 @@ class Tag
      * @var string
      *
      * @ORM\Column(name="color", type="string", length=9)
-     * @WandiAssert\HexColor
+     * @WandiAssert\HexColor()
      * @Assert\NotBlank(message="You must choose a color.")
      */
     private $color;
@@ -73,9 +73,9 @@ class Tag
 
 ### FormType
 
-This bundle is packaged with a custom Form Type `ColorPickerType` that'll add the Javascript color picker to the input.
+This bundle is packaged with a custom `ColorPickerType` that'll add the Javascript color picker to the input of your choice.
 
-All `Simonwep/pickr` options are overridable [see configuration reference](https://github.com/Simonwep/pickr#user-content-options). 
+All `Simonwep/pickr` options are overridable, [see complete configuration reference](https://github.com/Simonwep/pickr#user-content-options). 
 
 ```php
 namespace App\Form\Type;
@@ -167,3 +167,17 @@ Test rgb: {{ tag.color|wandi_color_picker_convert(constant("Wandi\\ColorPickerBu
 Test hsl: {{ tag.color|wandi_color_picker_convert(constant("Wandi\\ColorPickerBundle\\Twig\\ExtensionColorExtension::COLOR_HSL")) }}
 > {# hsla(146.05263, 40%, 37.2549%, 0.77) #}
 ```
+
+Feel free to use these `helpers` to set dynamically `HTML` inline styles (e.g. `color` or `background-color`).
+  
+If you need to know the brightness of the color, you can also use the filter:
+
+```twig
+{{ tag.color|wandi_color_picker_get_brightness }}
+> {# will return Wandi\ColorPickerBundle\Twig\Extension\ColorExtension::BRIGHTNESS_LIGHT or Wandi\ColorPickerBundle\Twig\Extension\ColorExtension::BRIGHTNESS_DARK depending on the color value #}
+
+If you apply a dynamic background-color to an HTML element, it can be usefull to also change the text color.
+
+### EasyAdminBundle
+
+WIP
