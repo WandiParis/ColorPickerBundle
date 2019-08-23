@@ -1,6 +1,6 @@
 The MIT License (MIT)
 
-Copyright (c) 2018 Laurent Bientz laurent@wandi.fr
+Copyright (c) 2019 Laurent Bientz laurent@wandi.fr
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
