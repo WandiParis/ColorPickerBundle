@@ -5,7 +5,7 @@
 ColorPickerPlus is a Symfony 4 wrapper for [Simonwep/pickr](https://github.com/Simonwep/pickr) Javascript Color-Picker library.
 
 <p align="center">
-    <img src="doc/wandi-color-picker.gif" align="middle" alt="WandiColorPicker" />
+    <img src="doc/img/wandi-color-picker.gif" align="middle" alt="WandiColorPicker" />
 </p>
 
 ### Features
