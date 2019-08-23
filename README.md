@@ -175,6 +175,7 @@ If you need to know the brightness of the color, you can also use the filter:
 ```twig
 {{ tag.color|wandi_color_picker_get_brightness }}
 > {# will return Wandi\ColorPickerBundle\Twig\Extension\ColorExtension::BRIGHTNESS_LIGHT or Wandi\ColorPickerBundle\Twig\Extension\ColorExtension::BRIGHTNESS_DARK depending on the color value #}
+```
 
 If you apply a dynamic background-color to an HTML element, it can be usefull to also change the text color.
 
