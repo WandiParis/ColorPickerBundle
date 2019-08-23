@@ -2,7 +2,7 @@
     {{ form_widget(form, {
         attr: {
             'autocomplete': 'off',
-            'style': (form.vars.value is not empty ? 'background-color: ' ~ form.vars.value ~ '; color: ' ~ (form.vars.value|wandi_color_picker_get_brightness == constant("App\\Twig\\Extension\\ColorExtension::BRIGHTNESS_DARK") ? '#FFF' : '#000') ~ ';'),
+            'style': (form.vars.value is not empty ? 'background-color: ' ~ form.vars.value ~ '; color: ' ~ (form.vars.value|wandi_color_picker_get_brightness == constant("Wandi\\ColorPickerBundle\\Twig\\Extension\\ColorExtension::BRIGHTNESS_DARK") ? '#FFF' : '#000') ~ ';'),
             'data-options': pickr_options | json_encode
         }
     }) }}

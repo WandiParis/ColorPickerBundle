@@ -95,6 +95,6 @@ class ColorExtension extends AbstractExtension
 
         /** @var Rgb $rgb */
         $rgb = $colorO->getRepresentation(Rgb::class);
-        return $rgb->calculateBrightness() <= 127.5 && $rgb->getAlpha() > 40 ? self::BRIGHTNESS_DARK : self::BRIGHTNESS_LIGHT;
+        return $rgb->calculateBrightness() <= 127.5 && $rgb->getAlpha() > 0.4 ? self::BRIGHTNESS_DARK : self::BRIGHTNESS_LIGHT;
     }
 }
