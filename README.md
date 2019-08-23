@@ -1,9 +1,15 @@
 # ColorPickerBundle
 
 ### About
+
 ColorPickerPlus is a Symfony 4 wrapper for [Simonwep/pickr](https://github.com/Simonwep/pickr) Javascript Color-Picker library.
 
+<p align="center">
+    <img src="doc/wandi-color-picker.gif" align="middle" alt="WandiColorPicker" />
+</p>
+
 ### Features
+
 - Add a custom `FormType` that displays a javascript color picker
 - Add a new custom `Constraint` to the validator
 - Add some `Twig` filters to convert colors
