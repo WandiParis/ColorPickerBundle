@@ -192,7 +192,7 @@ If you're using [EasyAdminPlusBundle](https://github.com/WandiParis/EasyAdminPlu
 #### List/Show
 
 ```yaml
-- { property: color, label: 'Color', type: 'Wandi\ColorPickerBundle\Form\Type\ColorPickerType' }
+- { property: color, label: 'Color', template: '@WandiEasyAdminPlus/templates/wandi_color_picker.html.twig' }
 ```
 
 <p align="center">
@@ -202,7 +202,7 @@ If you're using [EasyAdminPlusBundle](https://github.com/WandiParis/EasyAdminPlu
 #### New/Edit
 
 ```yaml
-- { property: color, label: 'Color', template: '@WandiEasyAdminPlus/templates/wandi_color_picker.html.twig' }
+- { property: color, label: 'Color', type: 'Wandi\ColorPickerBundle\Form\Type\ColorPickerType' }
 ```
 
 <p align="center">
