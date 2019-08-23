@@ -1,0 +1,56 @@
+{
+    "name": "wandi/color-picker-bundle",
+    "type": "symfony-bundle",
+    "description": "Wandi/ColorPickerBundle",
+    "keywords": [
+        "Symfony",
+        "Bundle",
+        "Wandi",
+        "ColorPickerBundle",
+        "EasyAdminBundle",
+        "Admin"
+    ],
+    "homepage": "https://github.com/WandiParis/ColorPickerBundle",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jacques N. de Lamballerie",
+            "email": "jndl@wandi.fr"
+        },
+        {
+            "name": "Laurent Fouquet",
+            "email": "laurent.fouquet@wandi.fr"
+        },
+        {
+            "name": "Laurent Bientz",
+            "email": "laurent.bientz@wandi.fr"
+        },
+        {
+            "name": "Jean-Baptiste Chateaux",
+            "email": "jean-baptiste.chateaux@wandi.fr"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "php": ">=7.1",
+        "symfony/config": "^4.0",
+        "symfony/dependency-injection": "^4.0",
+        "symfony/form": "^4.0",
+        "symfony/framework-bundle": "^4.0",
+        "symfony/http-kernel": "^4.0",
+        "symfony/translation": "^4.0",
+        "symfony/twig-bundle": "^4.0",
+        "symfony/validator": "^4.0",
+        "twig/extensions": "^1.5",
+        "ssnepenthe/color-utils": "^0.4.2"
+    },
+    "require-dev": {
+    },
+    "suggest": {
+    },
+    "autoload": {
+        "psr-4": {
+            "Wandi\\EasyAdminPlusBundle\\": "src/"
+        }
+    }
+}

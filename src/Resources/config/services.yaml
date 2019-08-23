@@ -1,0 +1,4 @@
+services:
+    App\Twig\Extension\ColorExtension:
+        tags:
+            - { name: twig.extension }

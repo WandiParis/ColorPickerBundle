@@ -1,0 +1,13 @@
+{% block wandi_color_picker_widget %}
+    {{ form_widget(form, {
+        attr: {
+            'autocomplete': 'off',
+            'style': (form.vars.value is not empty ? 'background-color: ' ~ form.vars.value ~ '; color: ' ~ (form.vars.value|wandi_color_picker_get_brightness == constant("App\\Twig\\Extension\\ColorExtension::BRIGHTNESS_DARK") ? '#FFF' : '#000') ~ ';'),
+            'data-options': pickr_options | json_encode
+        }
+    }) }}
+    <link rel="stylesheet" href="{{ asset('bundles/wandicolorpicker/css/' ~ pickr_options['theme'] ~ '.min.css') }}"/>
+    <script type="text/javascript">let wandiPickrId = '{{ form.vars.id }}';</script>
+    <script src="{{ asset('bundles/wandicolorpicker/js/pickr.min.js') }}"></script>
+    <script src="{{ asset('bundles/wandicolorpicker/js/wandicolorpicker.js') }}"></script>
+{% endblock %}
