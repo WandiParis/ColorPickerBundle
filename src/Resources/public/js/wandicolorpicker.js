@@ -1,7 +1,7 @@
 pickr = new Pickr(Object.assign({}, JSON.parse(wandiColorPickerInputElement.getAttribute("data-options")))).on('change', (color, instance) => {
     var hexa = color.toHEXA().toString();
     if (hexa.length == 7){
-        hexa += 'FF';
+        hexa = 'FF' + hexa;
     }
     var colorRgba = color.toRGBA();
     var el = instance.options.el;
