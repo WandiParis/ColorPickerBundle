@@ -24,6 +24,12 @@ see [composer.json](https://github.com/WandiParis/ColorPickerBundle/blob/master/
 $ composer require wandi/color-picker-bundle
 ```
 
+### Install the assets
+
+```shell
+php bin/console assets:install public
+```
+
 ### Entity
 
 We recommand you to store the hexadecimal color code with alpha (`AARRGGBB hex`) because it's the shortest standard with a length of simply 9 chars.
