@@ -2,3 +2,7 @@ services:
     Wandi\ColorPickerBundle\Twig\Extension\ColorExtension:
         tags:
             - { name: twig.extension }
+    Wandi\ColorPickerBundle\Form\Type\ColorPickerType:
+        arguments: ["@translator"]
+        tags:
+             - { name: form.type }
