@@ -195,6 +195,21 @@ If you apply a dynamic background-color to an HTML element, it can be usefull to
 
 If you're using [EasyAdminPlusBundle](https://github.com/WandiParis/EasyAdminPlusBundle/tree/master), our wrapper of [EasyAdminBundle](https://github.com/EasyCorp/EasyAdminBundle/tree/master), you can easily use this bundle is the admin area.
 
+##### Form Theme
+
+ /!\ If you are using [EasyAdminBundle 2.3.1+](https://github.com/EasyCorp/EasyAdminBundle/tree/master)  /!\
+
+You have to include our `Form Theme`, it contains the widget that will handle all the Javascript.
+
+```yaml
+# config/packages/twig.yaml
+easy_admin:
+    design:
+        form_theme:
+            - '@EasyAdmin/form/bootstrap_4.html.twig'
+            - '@FOSCKEditor/Form/ckeditor_widget.html.twig'
+```
+
 #### List/Show
 
 ```yaml
